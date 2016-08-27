@@ -280,8 +280,8 @@
 
 <p>As the Article progreses we shall come accross further complex implementation Of Singleton.</p>
 
-<pre id="pre937004">
-
+<pre>
+<code class="lang-javascript">
 var Employee = {
 &nbsp; name: &#39;Mayank&#39;,
   age: 28, 
@@ -290,8 +290,7 @@ var Employee = {
 &nbsp;   console.log(name + &#39; &#39; + designation);
 &nbsp; }
 }
- 
-</pre>
+</code></pre>
 
 <p>&nbsp;</p>
 
@@ -328,7 +327,7 @@ var Employee = {
 <p>The simplest implementation of <strong>Singleton </strong>is using <strong>&quot;Object Literal&quot;</strong>. Lets see a simple implementation:</p>
 
 <pre>
- 
+<code class="lang-javascript">
 var Employee = {
   name: &#39;Mayank&#39;,
   age: 28,
@@ -338,7 +337,7 @@ var Employee = {
 &nbsp; }
 }
 
-</pre>
+</code></pre>
 
 <p>&nbsp;</p>
 
@@ -357,7 +356,7 @@ var Employee = {
 <p>Now lets see the implementation of Singleton Pattern using IIFE:</p>
 
 <pre>
- 
+<code class="lang-javascript">
 var Employee = (function() {
   var name = &quot;Mayank;
   var age = 28;
@@ -380,7 +379,7 @@ Employee.designation;  // This is error since designation property is not expose
 
 Employee.showDetails();
 
-</pre>
+</code></pre>
 
 <p>&nbsp;</p>
 
@@ -405,7 +404,7 @@ Employee.showDetails();
 <p>3. More Complex Implementation of Singleton:</p>
 
 <pre>
- 
+<code class="lang-javascript">
 var Employee = (function() {
 
 &nbsp; var details = null;
@@ -427,7 +426,7 @@ var Employee = (function() {
 
 var myEmployee = Employee.getInstance();
 
-</pre>
+</code></pre>
 
 <p>In the above specified implementation, we have created an IIFE, this anonymous function returns the &quot;getInstance&quot; function.</p>
 
@@ -458,7 +457,7 @@ var myEmployee = Employee.getInstance();
 <p>In Lazy Instatiation, the Singleton variable will not get the momory untill we call the function which is responsible for creating and returning the Singleton Object.</p>
 
 <pre>
- 
+<code class="lang-javascript">
 var Employee = (function() {
 
 &nbsp; var details = null;
@@ -480,7 +479,7 @@ var Employee = (function() {
 
 var myEmployee = Employee.getInstance();
 
-</pre>
+</code></pre>
 
 <p>In this Example, the IIFE contains a singleton Object &quot;details&quot;, the details object shall not be assigned memory untill the function &quot;getInstance&quot; is called, this is called Lazi=y Instantiation.</p>
 
@@ -497,7 +496,7 @@ var myEmployee = Employee.getInstance();
 <p>In case of Early Instantiation, the singleton object is available to the user while initialization itself, the Singleton shall consume memory even if it is not used.&nbsp;</p>
 
 <pre>
- 
+<code class="lang-javascript">
 var Employee = (function() {
   var name = &quot;Mayank;
   var age = 28;
@@ -513,7 +512,7 @@ var Employee = (function() {
 &nbsp; }
 }
 
-</pre>
+</code></pre>
 
 <p>In this Example, the IIFE shall return set of functionalities and properties from the function. Here once the IIFE is executed, the singleton shall hold the properties and functionalities returned from the function invokation.</p>
 
